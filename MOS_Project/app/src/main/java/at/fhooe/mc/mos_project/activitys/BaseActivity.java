@@ -1,9 +1,6 @@
-package at.fhooe.mc.mos_project;
+package at.fhooe.mc.mos_project.activitys;
 
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,34 +10,32 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
+import at.fhooe.mc.mos_project.R;
+
+public class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private final String logTag = "BaseActivity";
+    private DrawerLayout drawer;
+    NavigationView navigationView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+    protected void onCreateDrawer(String toolbarTitle){
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        if (toolbar != null) {
+            toolbar.setTitle(toolbarTitle);
+        }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -78,24 +73,32 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        Intent intent;
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        switch (id) {
+            case R.id.nav_pedomenter:
+                intent = new Intent(getApplicationContext(), PedometerActivity.class);
+                openActivity(intent);
+                break;
+            case R.id.nav_testview:
+                intent = new Intent(getApplicationContext(), MainActivity.class);
+                openActivity(intent);
+                break;
+            default:
+                return false;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void openActivity(Intent intent){
+        //Handle older Versions here
+        //for now clear Implementation
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
 }

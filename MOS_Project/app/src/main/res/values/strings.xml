@@ -5,4 +5,17 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+
+    <string name="nav_pedometer">Pedometer</string>
+    <string name="nav_test">Test</string>
+
+
+    <string name="pedometer_button_start">Start Pedometer</string>
+    <string name="pedometer_button_stop">Stop Pedometer</string>
+    <string name="pedometer_tv_step_text">Number of Steps: </string>
+
+    <string name="title_activity_test_it_all">TestItAll</string>
+
 </resources>
