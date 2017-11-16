@@ -12,7 +12,7 @@ import android.view.MenuItem;
 
 import at.fhooe.mc.mos_project.R;
 
-public class BaseActivity extends AppCompatActivity
+public abstract class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private final String logTag = "BaseActivity";
     private DrawerLayout drawer;
