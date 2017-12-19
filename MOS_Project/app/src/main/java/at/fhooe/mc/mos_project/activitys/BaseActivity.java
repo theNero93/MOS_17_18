@@ -85,6 +85,9 @@ public abstract class BaseActivity extends AppCompatActivity
                 intent = new Intent(getApplicationContext(), MainActivity.class);
                 openActivity(intent);
                 break;
+            case R.id.nav_heart_rate:
+                intent = new Intent(getApplicationContext(), HeartRateActivity.class);
+                openActivity(intent);
             default:
                 return false;
         }

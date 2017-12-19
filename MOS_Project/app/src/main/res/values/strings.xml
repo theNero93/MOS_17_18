@@ -17,5 +17,6 @@
     <string name="pedometer_tv_step_text">Number of Steps: </string>
 
     <string name="title_activity_test_it_all">TestItAll</string>
+    <string name="title_activity_heart_rate">HeartRateActivity</string>
 
 </resources>

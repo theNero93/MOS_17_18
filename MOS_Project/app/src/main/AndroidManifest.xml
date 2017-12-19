@@ -25,6 +25,10 @@
         <activity
             android:name=".activitys.PedometerActivity"
             android:label="@string/title_activity_test_it_all"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activitys.HeartRateActivity"
+            android:label="@string/title_activity_heart_rate"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
