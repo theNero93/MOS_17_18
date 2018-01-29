@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0731684D201F7DAC00BE9601 /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731684C201F7DAC00BE9601 /* MenuTabBarController.swift */; };
+		0731684F201FA58F00BE9601 /* HeraklesExtansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731684E201FA58F00BE9601 /* HeraklesExtansions.swift */; };
+		07316851201FDC3200BE9601 /* TestSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07316850201FDC3200BE9601 /* TestSessionViewController.swift */; };
+		07316854201FDEBD00BE9601 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07316853201FDEBD00BE9601 /* UnitExtensions.swift */; };
+		07316856201FDED600BE9601 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07316855201FDED600BE9601 /* FormatDisplay.swift */; };
+		07316858201FE05E00BE9601 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07316857201FE05E00BE9601 /* LocationManager.swift */; };
+		0731685A201FE5EF00BE9601 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07316859201FE5EF00BE9601 /* Session.swift */; };
+		0731685C201FE6CE00BE9601 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731685B201FE6CE00BE9601 /* Location.swift */; };
 		07421B3820076BA700D07F69 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07421B3720076BA700D07F69 /* LoginViewController.swift */; };
 		07421B3A20076C0500D07F69 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07421B3920076C0500D07F69 /* RegistrationViewController.swift */; };
 		076C29CA20080FAB0011428E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076C29C920080FAB0011428E /* MenuViewController.swift */; };
@@ -25,6 +33,14 @@
 
 /* Begin PBXFileReference section */
 		064278E051BF58031F04EE58 /* Pods_MOS_Project_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOS_Project_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0731684C201F7DAC00BE9601 /* MenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarController.swift; sourceTree = "<group>"; };
+		0731684E201FA58F00BE9601 /* HeraklesExtansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeraklesExtansions.swift; sourceTree = "<group>"; };
+		07316850201FDC3200BE9601 /* TestSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSessionViewController.swift; sourceTree = "<group>"; };
+		07316853201FDEBD00BE9601 /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
+		07316855201FDED600BE9601 /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		07316857201FE05E00BE9601 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		07316859201FE5EF00BE9601 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		0731685B201FE6CE00BE9601 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		07421B3720076BA700D07F69 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07421B3920076C0500D07F69 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		07421B3B200771EF00D07F69 /* MOS_Project_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MOS_Project_iOS.entitlements; sourceTree = "<group>"; };
@@ -58,6 +74,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07316852201FDE8B00BE9601 /* GPSTracking */ = {
+			isa = PBXGroup;
+			children = (
+				07316853201FDEBD00BE9601 /* UnitExtensions.swift */,
+				07316855201FDED600BE9601 /* FormatDisplay.swift */,
+				07316857201FE05E00BE9601 /* LocationManager.swift */,
+			);
+			path = GPSTracking;
+			sourceTree = "<group>";
+		};
 		07421B3420076B7200D07F69 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +91,8 @@
 				07421B3920076C0500D07F69 /* RegistrationViewController.swift */,
 				076C29C920080FAB0011428E /* MenuViewController.swift */,
 				07887A05200FD24D002A422A /* LoadingViewController.swift */,
+				0731684C201F7DAC00BE9601 /* MenuTabBarController.swift */,
+				07316850201FDC3200BE9601 /* TestSessionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -72,6 +100,8 @@
 		07421B3620076B8600D07F69 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				07316859201FE5EF00BE9601 /* Session.swift */,
+				0731685B201FE6CE00BE9601 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,8 +117,10 @@
 		079B3D1C2008C903007D2361 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				07316852201FDE8B00BE9601 /* GPSTracking */,
 				07887A07200FDC22002A422A /* Login */,
 				079B3D1D2008C914007D2361 /* Pedometer */,
+				0731684E201FA58F00BE9601 /* HeraklesExtansions.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -192,6 +224,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
@@ -299,9 +334,17 @@
 			files = (
 				07421B3820076BA700D07F69 /* LoginViewController.swift in Sources */,
 				076C29CA20080FAB0011428E /* MenuViewController.swift in Sources */,
+				0731685C201FE6CE00BE9601 /* Location.swift in Sources */,
+				0731684F201FA58F00BE9601 /* HeraklesExtansions.swift in Sources */,
 				07D666BF20075209007A0506 /* MOS_Project_iOS.xcdatamodeld in Sources */,
 				07887A06200FD24D002A422A /* LoadingViewController.swift in Sources */,
+				0731685A201FE5EF00BE9601 /* Session.swift in Sources */,
+				07316851201FDC3200BE9601 /* TestSessionViewController.swift in Sources */,
 				07887A03200FC951002A422A /* KeychainPasswordItem.swift in Sources */,
+				07316856201FDED600BE9601 /* FormatDisplay.swift in Sources */,
+				07316854201FDEBD00BE9601 /* UnitExtensions.swift in Sources */,
+				0731684D201F7DAC00BE9601 /* MenuTabBarController.swift in Sources */,
+				07316858201FE05E00BE9601 /* LocationManager.swift in Sources */,
 				07421B3A20076C0500D07F69 /* RegistrationViewController.swift in Sources */,
 				079B3D1F2008C92C007D2361 /* PedometerLogic.swift in Sources */,
 				07D666B720075209007A0506 /* AppDelegate.swift in Sources */,

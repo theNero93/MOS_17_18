@@ -20,12 +20,14 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         let hasLoginKey = UserDefaults.standard.bool(forKey: "hasLoginKey")
         if hasLoginKey {
             print("Has User Login")
             checkLogin()
         }else {
-            toLogin()
+            performSegue(withIdentifier: loginSegueIdentifier, sender: self)
+            //toLogin()
             print("has no User Login")
         }
         
@@ -38,7 +40,8 @@ class LoadingViewController: UIViewController {
         //Check Login
         guard let username = UserDefaults.standard.value(forKey: "username") as? String else {
             print("No Username Stored -> toLogin")
-            toLogin()
+            performSegue(withIdentifier: loginSegueIdentifier, sender: self)
+            //toLogin()
             return
         }
         
@@ -53,8 +56,10 @@ class LoadingViewController: UIViewController {
                     print("Username: \(username), Password: \(keychainPassword)")
                     self.performSegue(withIdentifier: self.menuSegueIdentifier, sender: self)
                 }else {
+                    
                     print("No Login Found -> To Login Controller")
-                    self.toLogin()
+                    self.performSegue(withIdentifier: self.loginSegueIdentifier, sender: self)
+                    //self.toLogin()
                 }
             }
         } catch {

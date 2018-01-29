@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         emailText.placeholder = NSLocalizedString("Email", comment: "Email")
         passwordText.placeholder = NSLocalizedString("Password", comment: "Password")
         passwordText.isSecureTextEntry = true
