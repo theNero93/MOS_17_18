@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07421B3820076BA700D07F69 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07421B3720076BA700D07F69 /* LoginViewController.swift */; };
+		07421B3A20076C0500D07F69 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07421B3920076C0500D07F69 /* RegistrationViewController.swift */; };
+		076C29CA20080FAB0011428E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076C29C920080FAB0011428E /* MenuViewController.swift */; };
+		07887A03200FC951002A422A /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07887A02200FC951002A422A /* KeychainPasswordItem.swift */; };
+		07887A06200FD24D002A422A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07887A05200FD24D002A422A /* LoadingViewController.swift */; };
+		079B3D1F2008C92C007D2361 /* PedometerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B3D1E2008C92C007D2361 /* PedometerLogic.swift */; };
+		079B3D212008CF80007D2361 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079B3D202008CF80007D2361 /* HealthKit.framework */; };
 		07D666B720075209007A0506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D666B620075209007A0506 /* AppDelegate.swift */; };
-		07D666B920075209007A0506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D666B820075209007A0506 /* ViewController.swift */; };
 		07D666BC20075209007A0506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D666BA20075209007A0506 /* Main.storyboard */; };
 		07D666BF20075209007A0506 /* MOS_Project_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07D666BD20075209007A0506 /* MOS_Project_iOS.xcdatamodeld */; };
 		07D666C120075209007A0506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D666C020075209007A0506 /* Assets.xcassets */; };
@@ -19,9 +25,16 @@
 
 /* Begin PBXFileReference section */
 		064278E051BF58031F04EE58 /* Pods_MOS_Project_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOS_Project_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07421B3720076BA700D07F69 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		07421B3920076C0500D07F69 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		07421B3B200771EF00D07F69 /* MOS_Project_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MOS_Project_iOS.entitlements; sourceTree = "<group>"; };
+		076C29C920080FAB0011428E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		07887A02200FC951002A422A /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
+		07887A05200FD24D002A422A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		079B3D1E2008C92C007D2361 /* PedometerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerLogic.swift; sourceTree = "<group>"; };
+		079B3D202008CF80007D2361 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		07D666B320075209007A0506 /* MOS_Project_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOS_Project_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D666B620075209007A0506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07D666B820075209007A0506 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07D666BB20075209007A0506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07D666BE20075209007A0506 /* MOS_Project_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MOS_Project_iOS.xcdatamodel; sourceTree = "<group>"; };
 		07D666C020075209007A0506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,12 +51,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AEAAE82D5A6757D9ABDBD94 /* Pods_MOS_Project_iOS.framework in Frameworks */,
+				079B3D212008CF80007D2361 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07421B3420076B7200D07F69 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				07421B3720076BA700D07F69 /* LoginViewController.swift */,
+				07421B3920076C0500D07F69 /* RegistrationViewController.swift */,
+				076C29C920080FAB0011428E /* MenuViewController.swift */,
+				07887A05200FD24D002A422A /* LoadingViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		07421B3620076B8600D07F69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07887A07200FDC22002A422A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				07887A02200FC951002A422A /* KeychainPasswordItem.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		079B3D1C2008C903007D2361 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				07887A07200FDC22002A422A /* Login */,
+				079B3D1D2008C914007D2361 /* Pedometer */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		079B3D1D2008C914007D2361 /* Pedometer */ = {
+			isa = PBXGroup;
+			children = (
+				079B3D1E2008C92C007D2361 /* PedometerLogic.swift */,
+			);
+			path = Pedometer;
+			sourceTree = "<group>";
+		};
 		07D666AA20075209007A0506 = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +122,11 @@
 		07D666B520075209007A0506 /* MOS_Project_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				07421B3B200771EF00D07F69 /* MOS_Project_iOS.entitlements */,
+				079B3D1C2008C903007D2361 /* Logic */,
+				07421B3620076B8600D07F69 /* Models */,
+				07421B3420076B7200D07F69 /* Controllers */,
 				07D666B620075209007A0506 /* AppDelegate.swift */,
-				07D666B820075209007A0506 /* ViewController.swift */,
 				07D666BA20075209007A0506 /* Main.storyboard */,
 				07D666C020075209007A0506 /* Assets.xcassets */,
 				07D666C220075209007A0506 /* LaunchScreen.storyboard */,
@@ -80,6 +140,7 @@
 		601F4DE1B21765C3A929FD7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				079B3D202008CF80007D2361 /* HealthKit.framework */,
 				064278E051BF58031F04EE58 /* Pods_MOS_Project_iOS.framework */,
 			);
 			name = Frameworks;
@@ -130,6 +191,14 @@
 					07D666B220075209007A0506 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -228,8 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07421B3820076BA700D07F69 /* LoginViewController.swift in Sources */,
+				076C29CA20080FAB0011428E /* MenuViewController.swift in Sources */,
 				07D666BF20075209007A0506 /* MOS_Project_iOS.xcdatamodeld in Sources */,
-				07D666B920075209007A0506 /* ViewController.swift in Sources */,
+				07887A06200FD24D002A422A /* LoadingViewController.swift in Sources */,
+				07887A03200FC951002A422A /* KeychainPasswordItem.swift in Sources */,
+				07421B3A20076C0500D07F69 /* RegistrationViewController.swift in Sources */,
+				079B3D1F2008C92C007D2361 /* PedometerLogic.swift in Sources */,
 				07D666B720075209007A0506 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +442,7 @@
 			baseConfigurationReference = 328AEBC333852730CC484510 /* Pods-MOS_Project_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MOS_Project_iOS/MOS_Project_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5KGLR6TP4;
 				INFOPLIST_FILE = MOS_Project_iOS/Info.plist;
@@ -384,6 +459,7 @@
 			baseConfigurationReference = C89CC3E66391F42F23AECAFE /* Pods-MOS_Project_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MOS_Project_iOS/MOS_Project_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5KGLR6TP4;
 				INFOPLIST_FILE = MOS_Project_iOS/Info.plist;
