@@ -24,7 +24,7 @@ class LoadingViewController: UIViewController {
         let hasLoginKey = UserDefaults.standard.bool(forKey: "hasLoginKey")
         if hasLoginKey {
             print("Has User Login")
-            checkLogin()
+            toLogin()
         }else {
             performSegue(withIdentifier: loginSegueIdentifier, sender: self)
             //toLogin()
