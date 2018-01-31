@@ -9,6 +9,11 @@
 import Foundation
 
 class Location {
+    private static let KEY_LATITUDE = "latitude"
+    private static let KEY_LONGITUDE = "longitude"
+    private static let KEY_TIMESTAMP = "timestamp"
+    
+    
     var latitude: Double
     var longitude: Double
     var timeStamp: Date
@@ -22,6 +27,13 @@ class Location {
         latitude = 0
         longitude = 0
         timeStamp = Date()
+    }
+    
+    init(dict: NSDictionary) {
+        latitude = dict[Location.KEY_LATITUDE] as? Double ?? 0
+        longitude = dict[Location.KEY_LONGITUDE] as? Double ?? 0
+        let timeInterval = dict[Location.KEY_TIMESTAMP] as? Double ?? 0
+        timeStamp = Date(timeIntervalSince1970: timeInterval)
     }
     
 }
