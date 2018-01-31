@@ -37,9 +37,9 @@ class Location {
     }
     
     func dictRep() -> NSDictionary {
-        let dict = NSDictionary(
-        
-    )
+        let dict: NSDictionary = [Location.KEY_LATITUDE : latitude,
+                                  Location.KEY_LONGITUDE : longitude,
+                                  Location.KEY_TIMESTAMP : timeStamp.timeIntervalSince1970]
         return dict
     }
     
