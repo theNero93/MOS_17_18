@@ -36,4 +36,11 @@ class Location {
         timeStamp = Date(timeIntervalSince1970: timeInterval)
     }
     
+    func dictRep() -> NSDictionary {
+        let dict = NSDictionary(
+        
+    )
+        return dict
+    }
+    
 }
