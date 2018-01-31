@@ -19,12 +19,12 @@ class PedometerViewController: UIViewController {
     let pedometerLogic = PedometerLogic.shared
     let firebaseHelper = FirebaseHelper.shared
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
     }
-
     
     private func setupView() {
         setupStepsToday()
@@ -76,7 +76,7 @@ class PedometerViewController: UIViewController {
         let startDate = Date().startOfYear()
         pedometerLogic.getSteps(from: startDate, to: endDate) {(data, error) in
             guard let pedometerData = data, error == nil else {
-                print("Something went Wrong while getting yeas steps")
+                print("Something went Wrong while getting years steps")
                 DispatchQueue.main.async {
                     self.stepsTodayLabel.text = "No Data!"
                 }
