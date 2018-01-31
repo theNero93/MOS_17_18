@@ -21,6 +21,7 @@
 		07887A03200FC951002A422A /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07887A02200FC951002A422A /* KeychainPasswordItem.swift */; };
 		07887A06200FD24D002A422A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07887A05200FD24D002A422A /* LoadingViewController.swift */; };
 		079B3D1F2008C92C007D2361 /* PedometerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B3D1E2008C92C007D2361 /* PedometerLogic.swift */; };
+		07CA68FB2021FC32006A2963 /* HeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CA68FA2021FC31006A2963 /* HeartRate.swift */; };
 		07D666B720075209007A0506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D666B620075209007A0506 /* AppDelegate.swift */; };
 		07D666BC20075209007A0506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D666BA20075209007A0506 /* Main.storyboard */; };
 		07D666BF20075209007A0506 /* MOS_Project_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07D666BD20075209007A0506 /* MOS_Project_iOS.xcdatamodeld */; };
@@ -55,6 +56,7 @@
 		07887A02200FC951002A422A /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		07887A05200FD24D002A422A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		079B3D1E2008C92C007D2361 /* PedometerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerLogic.swift; sourceTree = "<group>"; };
+		07CA68FA2021FC31006A2963 /* HeartRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRate.swift; sourceTree = "<group>"; };
 		07D666B320075209007A0506 /* MOS_Project_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOS_Project_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D666B620075209007A0506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07D666BB20075209007A0506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				07316859201FE5EF00BE9601 /* Session.swift */,
 				0731685B201FE6CE00BE9601 /* Location.swift */,
 				07F8A9A120212ED200EF7B1F /* UserData.swift */,
+				07CA68FA2021FC31006A2963 /* HeartRate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				07F8A9962021239E00EF7B1F /* PedometerViewController.swift in Sources */,
 				07887A03200FC951002A422A /* KeychainPasswordItem.swift in Sources */,
 				07316856201FDED600BE9601 /* FormatDisplay.swift in Sources */,
+				07CA68FB2021FC32006A2963 /* HeartRate.swift in Sources */,
 				07316854201FDEBD00BE9601 /* UnitExtensions.swift in Sources */,
 				0731684D201F7DAC00BE9601 /* MenuTabBarController.swift in Sources */,
 				07F8A9A020212AA300EF7B1F /* SessionTableViewCell.swift in Sources */,

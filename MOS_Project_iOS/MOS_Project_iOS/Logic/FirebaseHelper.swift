@@ -20,6 +20,9 @@ class FirebaseHelper {
     
     
     let KEY_USERDATA = "userdata"
+    let KEY_SESSIONS = "sessions"
+    let KEY_LOCATIONS = "locations"
+    
     
     private init() {
         FirebaseApp.configure()
@@ -62,4 +65,44 @@ class FirebaseHelper {
         
 
     }
+    
+    func saveSession(session: Session) -> Bool {
+        if isLogedIn {
+            let timekey = String(session.timeStamp.timeIntervalSince1970).replacingOccurrences(of: ".", with: "")
+            /*dbRef.child("\(KEY_SESSIONS)/\(user!.uid)").setValue(session.dictRep(), forKey: timekey)
+            let locRef = dbRef.child("\(KEY_SESSIONS)/\(user!.uid)/\(timekey)").childByAutoId()
+            for location in session.locations {
+                locRef.setValue(location.dictRep())
+            }*/
+            print(timekey)
+            let childRef = dbRef.child("\(KEY_SESSIONS)/\(user!.uid)/\(timekey)")
+            childRef.setValue(session.dictRep())
+            let locRef = childRef.child(KEY_LOCATIONS).childByAutoId()
+            for location in session.locations {
+                locRef.setValue(location.dictRep())
+            }
+            return true
+        }else {
+            return false
+        }
+    }
+    
+    func getSession(completion: @escaping ([Session]?, Bool)->Void) {
+        if isLogedIn {
+            dbRef.child("\(KEY_SESSIONS)/\(user!.uid)").observe(.value) { snapshot in
+                var sessions: [Session] = []
+
+                
+                for child in snapshot.children {
+                    let sessionChild = child as! DataSnapshot
+                    let dict = sessionChild.value as! [String:AnyObject] 
+                    sessions.append(Session(any: dict))
+
+ 
+                }
+                completion(sessions, true)
+            }
+        }
+    }
+    
 }

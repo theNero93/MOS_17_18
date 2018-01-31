@@ -13,6 +13,8 @@ class SessionMainViewController: UIViewController {
     
     let segueSessionDetailIdentifier = "sessionDetailSegue"
     
+    let firebaseHelper = FirebaseHelper.shared
+    
     var sessions = [Session]()
     
     var selectedSession = Session()
@@ -24,7 +26,16 @@ class SessionMainViewController: UIViewController {
         super.viewDidLoad()
         lastSessionsTableView.delegate = self
         lastSessionsTableView.dataSource = self
-
+        loadSessions()
+    }
+    
+    private func loadSessions() {
+        firebaseHelper.getSession(){(sessionData, success) in
+            if success {
+                self.sessions = sessionData!
+            }
+            
+        }
     }
 
 
