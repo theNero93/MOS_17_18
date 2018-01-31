@@ -8,5 +8,6 @@ target 'MOS_Project_iOS' do
   # Pods for MOS_Project_iOS
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end

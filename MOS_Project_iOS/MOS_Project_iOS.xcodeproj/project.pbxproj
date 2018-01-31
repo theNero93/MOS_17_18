@@ -27,6 +27,14 @@
 		07D666C120075209007A0506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D666C020075209007A0506 /* Assets.xcassets */; };
 		07D666C420075209007A0506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D666C220075209007A0506 /* LaunchScreen.storyboard */; };
 		07D666CC20075340007A0506 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07D666CB20075340007A0506 /* GoogleService-Info.plist */; };
+		07F8A9962021239E00EF7B1F /* PedometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A9952021239E00EF7B1F /* PedometerViewController.swift */; };
+		07F8A9982021274400EF7B1F /* SessionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A9972021274400EF7B1F /* SessionMainViewController.swift */; };
+		07F8A99B2021283300EF7B1F /* LiveSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A99A2021283300EF7B1F /* LiveSessionViewController.swift */; };
+		07F8A99D2021284100EF7B1F /* SessionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A99C2021284100EF7B1F /* SessionDetailViewController.swift */; };
+		07F8A9A020212AA300EF7B1F /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A99F20212AA300EF7B1F /* SessionTableViewCell.swift */; };
+		07F8A9A220212ED200EF7B1F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A9A120212ED200EF7B1F /* UserData.swift */; };
+		07F8A9A6202138E300EF7B1F /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A9A5202138E300EF7B1F /* FirebaseHelper.swift */; };
+		07F8A9A82021593F00EF7B1F /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A9A72021593F00EF7B1F /* CalculatorLogic.swift */; };
 		6AEAAE82D5A6757D9ABDBD94 /* Pods_MOS_Project_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064278E051BF58031F04EE58 /* Pods_MOS_Project_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +63,14 @@
 		07D666C320075209007A0506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D666C520075209007A0506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D666CB20075340007A0506 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		07F8A9952021239E00EF7B1F /* PedometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerViewController.swift; sourceTree = "<group>"; };
+		07F8A9972021274400EF7B1F /* SessionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMainViewController.swift; sourceTree = "<group>"; };
+		07F8A99A2021283300EF7B1F /* LiveSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionViewController.swift; sourceTree = "<group>"; };
+		07F8A99C2021284100EF7B1F /* SessionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailViewController.swift; sourceTree = "<group>"; };
+		07F8A99F20212AA300EF7B1F /* SessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		07F8A9A120212ED200EF7B1F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		07F8A9A5202138E300EF7B1F /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		07F8A9A72021593F00EF7B1F /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
 		328AEBC333852730CC484510 /* Pods-MOS_Project_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOS_Project_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MOS_Project_iOS/Pods-MOS_Project_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C89CC3E66391F42F23AECAFE /* Pods-MOS_Project_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOS_Project_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MOS_Project_iOS/Pods-MOS_Project_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,12 +100,14 @@
 		07421B3420076B7200D07F69 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				07F8A9992021281400EF7B1F /* SessionControllers */,
 				07421B3720076BA700D07F69 /* LoginViewController.swift */,
 				07421B3920076C0500D07F69 /* RegistrationViewController.swift */,
 				076C29C920080FAB0011428E /* MenuViewController.swift */,
 				07887A05200FD24D002A422A /* LoadingViewController.swift */,
 				0731684C201F7DAC00BE9601 /* MenuTabBarController.swift */,
 				07316850201FDC3200BE9601 /* TestSessionViewController.swift */,
+				07F8A9952021239E00EF7B1F /* PedometerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -99,6 +117,7 @@
 			children = (
 				07316859201FE5EF00BE9601 /* Session.swift */,
 				0731685B201FE6CE00BE9601 /* Location.swift */,
+				07F8A9A120212ED200EF7B1F /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,6 +137,8 @@
 				07887A07200FDC22002A422A /* Login */,
 				079B3D1D2008C914007D2361 /* Pedometer */,
 				0731684E201FA58F00BE9601 /* HeraklesExtansions.swift */,
+				07F8A9A5202138E300EF7B1F /* FirebaseHelper.swift */,
+				07F8A9A72021593F00EF7B1F /* CalculatorLogic.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -154,6 +175,7 @@
 				07421B3B200771EF00D07F69 /* MOS_Project_iOS.entitlements */,
 				079B3D1C2008C903007D2361 /* Logic */,
 				07421B3620076B8600D07F69 /* Models */,
+				07F8A99E20212A8500EF7B1F /* TableViewCells */,
 				07421B3420076B7200D07F69 /* Controllers */,
 				07D666B620075209007A0506 /* AppDelegate.swift */,
 				07D666BA20075209007A0506 /* Main.storyboard */,
@@ -164,6 +186,24 @@
 				07D666BD20075209007A0506 /* MOS_Project_iOS.xcdatamodeld */,
 			);
 			path = MOS_Project_iOS;
+			sourceTree = "<group>";
+		};
+		07F8A9992021281400EF7B1F /* SessionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				07F8A9972021274400EF7B1F /* SessionMainViewController.swift */,
+				07F8A99A2021283300EF7B1F /* LiveSessionViewController.swift */,
+				07F8A99C2021284100EF7B1F /* SessionDetailViewController.swift */,
+			);
+			path = SessionControllers;
+			sourceTree = "<group>";
+		};
+		07F8A99E20212A8500EF7B1F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				07F8A99F20212AA300EF7B1F /* SessionTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		601F4DE1B21765C3A929FD7C /* Frameworks */ = {
@@ -275,12 +315,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MOS_Project_iOS/Pods-MOS_Project_iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,15 +376,23 @@
 				0731684F201FA58F00BE9601 /* HeraklesExtansions.swift in Sources */,
 				07D666BF20075209007A0506 /* MOS_Project_iOS.xcdatamodeld in Sources */,
 				07887A06200FD24D002A422A /* LoadingViewController.swift in Sources */,
+				07F8A99B2021283300EF7B1F /* LiveSessionViewController.swift in Sources */,
 				0731685A201FE5EF00BE9601 /* Session.swift in Sources */,
+				07F8A9A82021593F00EF7B1F /* CalculatorLogic.swift in Sources */,
 				07316851201FDC3200BE9601 /* TestSessionViewController.swift in Sources */,
+				07F8A9982021274400EF7B1F /* SessionMainViewController.swift in Sources */,
+				07F8A9962021239E00EF7B1F /* PedometerViewController.swift in Sources */,
 				07887A03200FC951002A422A /* KeychainPasswordItem.swift in Sources */,
 				07316856201FDED600BE9601 /* FormatDisplay.swift in Sources */,
 				07316854201FDEBD00BE9601 /* UnitExtensions.swift in Sources */,
 				0731684D201F7DAC00BE9601 /* MenuTabBarController.swift in Sources */,
+				07F8A9A020212AA300EF7B1F /* SessionTableViewCell.swift in Sources */,
+				07F8A9A220212ED200EF7B1F /* UserData.swift in Sources */,
 				07316858201FE05E00BE9601 /* LocationManager.swift in Sources */,
 				07421B3A20076C0500D07F69 /* RegistrationViewController.swift in Sources */,
 				079B3D1F2008C92C007D2361 /* PedometerLogic.swift in Sources */,
+				07F8A9A6202138E300EF7B1F /* FirebaseHelper.swift in Sources */,
+				07F8A99D2021284100EF7B1F /* SessionDetailViewController.swift in Sources */,
 				07D666B720075209007A0506 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

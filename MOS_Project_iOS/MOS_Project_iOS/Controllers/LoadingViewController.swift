@@ -15,26 +15,46 @@ class LoadingViewController: UIViewController {
         static let accessGroup: String? = nil
     }
     
+    let firebaseHelper = FirebaseHelper.shared
+    
     let loginSegueIdentifier = "loginSegue"
     let menuSegueIdentifier = "menuSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        let hasLoginKey = UserDefaults.standard.bool(forKey: "hasLoginKey")
+        //performSegue(withIdentifier: loginSegueIdentifier, sender: self)
+        checkLoginFake()
+        /*let hasLoginKey = UserDefaults.standard.bool(forKey: "hasLoginKey")
         if hasLoginKey {
             print("Has User Login")
-            toLogin()
+         
         }else {
             performSegue(withIdentifier: loginSegueIdentifier, sender: self)
             //toLogin()
             print("has no User Login")
-        }
+        }*/
         
 
         // Do any additional setup after loading the view.
     }
 
+    private func checkLoginFake(){
+        let email = "martin.schi93@gmail.com"
+        let pw = "123456"
+        
+        firebaseHelper.loginUser(email: email, password: pw){ (user, error) in
+            if error == nil {
+                print("Username: \(email), Password: \(pw)")
+                self.performSegue(withIdentifier: self.menuSegueIdentifier, sender: self)
+            }else {
+                
+                print("No Login Found -> To Login Controller")
+                self.performSegue(withIdentifier: self.loginSegueIdentifier, sender: self)
+                //self.toLogin()
+            }
+        }
+    }
     
     private func checkLogin(){
         //Check Login
@@ -51,7 +71,7 @@ class LoadingViewController: UIViewController {
                                                     accessGroup: KeychainConfiguration.accessGroup)
             let keychainPassword = try passwordItem.readPassword()
             print("Does it run?")
-            Auth.auth().signIn(withEmail: username, password: keychainPassword) { (user, error) in
+            firebaseHelper.loginUser(email: username, password: keychainPassword) { (user, error) in
                 if error == nil {
                     print("Username: \(username), Password: \(keychainPassword)")
                     self.performSegue(withIdentifier: self.menuSegueIdentifier, sender: self)

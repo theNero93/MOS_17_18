@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
+    let firebaseHelper = FirebaseHelper.shared
+    
     struct KeychainConfiguration {
         static let serviceName = "TouchMeIn"
         static let accessGroup: String? = nil
@@ -33,14 +35,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
+        firebaseHelper.loginUser(email: emailText.text!, password: passwordText.text!) { (user, error) in
             if error == nil {
                 self.setupUserdata()
                 self.performSegue(withIdentifier: self.loginSuccessLogin, sender: self)
             }else {
                 self.showLoginFailedAlert()
             }
+            
         }
+
     }
     
     private func setupUserdata(){
