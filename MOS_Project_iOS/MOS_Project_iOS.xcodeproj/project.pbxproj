@@ -36,6 +36,7 @@
 		07F8A9A6202138E300EF7B1F /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A9A5202138E300EF7B1F /* FirebaseHelper.swift */; };
 		07F8A9A82021593F00EF7B1F /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8A9A72021593F00EF7B1F /* CalculatorLogic.swift */; };
 		6AEAAE82D5A6757D9ABDBD94 /* Pods_MOS_Project_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064278E051BF58031F04EE58 /* Pods_MOS_Project_iOS.framework */; };
+		8847F33C20230CEE00BC59DA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F33B20230CEE00BC59DA /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		07F8A9A5202138E300EF7B1F /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		07F8A9A72021593F00EF7B1F /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
 		328AEBC333852730CC484510 /* Pods-MOS_Project_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOS_Project_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MOS_Project_iOS/Pods-MOS_Project_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8847F33B20230CEE00BC59DA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C89CC3E66391F42F23AECAFE /* Pods-MOS_Project_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOS_Project_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MOS_Project_iOS/Pods-MOS_Project_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				0731684C201F7DAC00BE9601 /* MenuTabBarController.swift */,
 				07316850201FDC3200BE9601 /* TestSessionViewController.swift */,
 				07F8A9952021239E00EF7B1F /* PedometerViewController.swift */,
+				8847F33B20230CEE00BC59DA /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				07887A06200FD24D002A422A /* LoadingViewController.swift in Sources */,
 				07F8A99B2021283300EF7B1F /* LiveSessionViewController.swift in Sources */,
 				0731685A201FE5EF00BE9601 /* Session.swift in Sources */,
+				8847F33C20230CEE00BC59DA /* SettingsViewController.swift in Sources */,
 				07F8A9A82021593F00EF7B1F /* CalculatorLogic.swift in Sources */,
 				07316851201FDC3200BE9601 /* TestSessionViewController.swift in Sources */,
 				07F8A9982021274400EF7B1F /* SessionMainViewController.swift in Sources */,

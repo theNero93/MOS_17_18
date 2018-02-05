@@ -26,6 +26,11 @@ class PedometerViewController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.title = "Pedometer"
+    }
+    
     private func setupView() {
         setupStepsToday()
         setupStepsGoal()

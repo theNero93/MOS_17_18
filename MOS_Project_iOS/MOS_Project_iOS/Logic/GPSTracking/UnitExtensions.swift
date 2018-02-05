@@ -37,11 +37,11 @@ class UnitConverterPace : UnitConverter {
 
 extension UnitSpeed {
     class var secondsPerMeter: UnitSpeed {
-        return UnitSpeed(symbol: "sec/m", converter: UnitConverterPace(coefficient: 1))
+        return UnitSpeed(symbol: "m/sec", converter: UnitConverterPace(coefficient: 1))
     }
     
     class var minutesPerKilometer: UnitSpeed {
-        return UnitSpeed(symbol: "min/km", converter: UnitConverterPace(coefficient: 60.0/1000))
+        return UnitSpeed(symbol: "km/min", converter: UnitConverterPace(coefficient: 1000/60.0))
     }
     
     

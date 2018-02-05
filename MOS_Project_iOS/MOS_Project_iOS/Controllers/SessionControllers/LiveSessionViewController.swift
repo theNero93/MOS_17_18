@@ -11,6 +11,9 @@ import CoreLocation
 import MapKit
 
 class LiveSessionViewController: UIViewController {
+    
+    //border color
+    var borderColor = UIColor(red:0.00, green:0.47, blue:0.60, alpha:1.0)
 
     @IBOutlet weak var timeSessionLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -37,8 +40,10 @@ class LiveSessionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         myMap.delegate = self
-
+        self.navigationItem.hidesBackButton = false
         
+        //start stop button border color
+        self.startStopButton.layer.borderColor = self.borderColor.cgColor
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,13 +58,12 @@ class LiveSessionViewController: UIViewController {
     }
     
     private func updateDisplay() {
-        let formattedDistance = FormatDisplay.distance(distance)
+        let formattedDistance = round(distance.value)
         let formattedTime = FormatDisplay.time(seconds)
-        let formattedPace = FormatDisplay.pace(distance: distance, seconds: seconds, outputUnit: UnitSpeed.minutesPerKilometer)
+        let formattedPace = FormatDisplay.pace(distance: distance, seconds: seconds, outputUnit: UnitSpeed.metersPerSecond)
         
-        
-        distanceLabel.text = "Distance: \(formattedDistance)"
         timeSessionLabel.text = "\(formattedTime)"
+        distanceLabel.text = "\(formattedDistance) m"
         paceLabel.text = "\(formattedPace)"
     }
     
@@ -71,6 +75,7 @@ class LiveSessionViewController: UIViewController {
     }
     
     private func startRun() {
+        self.navigationItem.hidesBackButton = true
         startStopButton.setTitle("Stop", for: .normal)
         isStart = false
         seconds = 0
