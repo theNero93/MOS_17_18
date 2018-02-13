@@ -20,7 +20,6 @@ class LiveSessionViewController: UIViewController {
     @IBOutlet weak var paceLabel: UILabel!
     
     @IBOutlet weak var myMap: MKMapView!
-    //PLACEHOLDER (Zu müde für herumspielerrei mit bar button item sorry)
     @IBOutlet weak var startStopButton: UIButton!
     
     private let locationManager = LocationManager.shared
@@ -69,6 +68,7 @@ class LiveSessionViewController: UIViewController {
     
     private func updateDisplay() {
         let formattedDistance = FormatDisplay.distance(distance)
+        //FormatDisplay.distance(distance)
         let formattedTime = FormatDisplay.time(seconds)
         let formattedPace = FormatDisplay.pace(distance: distance, seconds: seconds, outputUnit: UnitSpeed.minutesPerKilometer)
         
@@ -107,6 +107,8 @@ class LiveSessionViewController: UIViewController {
             let locationObj = Location(lat: location.coordinate.latitude, long: location.coordinate.longitude, timeStamp: location.timestamp)
             mySession.locations.append(locationObj)
         }
+        
+        mySession.heartRate = heartRateList
         
         
         timer?.invalidate()

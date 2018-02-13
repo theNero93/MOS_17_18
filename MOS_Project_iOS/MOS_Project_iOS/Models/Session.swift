@@ -12,8 +12,9 @@ import FirebaseDatabase
 class Session {
     private static let KEY_DISTANCE = "distance"
     private static let KEY_DURATION = "duration"
-    private static let KEY_LOCATIONS = "locations"
     private static let KEY_TIMESTAMP = "timestamp"
+    static let KEY_LOCATIONS = "locations"
+    static let KEY_HEARTRATE = "heartrate"
     
     
     
@@ -45,8 +46,25 @@ class Session {
         duration = any[Session.KEY_DURATION] as? Int ?? 0
         let timeInterval: TimeInterval = any[Session.KEY_TIMESTAMP] as? Double ?? 0
         timeStamp = Date(timeIntervalSince1970: timeInterval)
-        locations = [Location]()
+        locations = []
         heartRate = []
+        if let locationDict = any[Session.KEY_LOCATIONS] as? [String:AnyObject] {
+            for loc in locationDict {
+                if let locDict = loc.value as? [String:AnyObject] {
+                    locations.append(Location(dict: locDict))
+                }
+                
+            }
+        }
+        if let heartrateDict = any[Session.KEY_HEARTRATE] as? [String:AnyObject] {
+            for hr in heartrateDict {
+                if let hrDict = hr.value as? [String:AnyObject] {
+                    heartRate.append(HeartRate(dict: hrDict))
+                }
+            }
+        }
+        
+        
  
     }
     

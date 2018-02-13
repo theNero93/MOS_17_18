@@ -33,6 +33,7 @@ class SessionMainViewController: UIViewController {
         firebaseHelper.getSession(){(sessionData, success) in
             if success {
                 self.sessions = sessionData!
+                self.lastSessionsTableView.reloadData()
             }
             
         }
@@ -44,13 +45,16 @@ class SessionMainViewController: UIViewController {
 
 extension SessionMainViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return sessions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: sessionCellReuseIdentifier, for: indexPath) as! SessionTableViewCell
-        cell.sessionDateLabel.text = "02.01.2018"
-        cell.sessionTimeLabel.text = "01:04:54"
+        let cellDataSession = sessions[indexPath.row]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        cell.sessionDateLabel.text = dateFormatter.string(from: cellDataSession.timeStamp)
+        cell.sessionTimeLabel.text = "\(cellDataSession.duration) sec"
         
         return cell
     }
