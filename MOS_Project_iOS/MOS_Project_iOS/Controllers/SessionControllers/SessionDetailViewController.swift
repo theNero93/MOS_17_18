@@ -21,14 +21,29 @@ class SessionDetailViewController: UIViewController {
     @IBOutlet weak var mapDetail: MKMapView!
     
     private let calcLogic = CalculatorLogic.shared
+    private let firebaseHelper = FirebaseHelper.shared
+    
+    private var userData = UserData()
     
     var session = Session()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadUserData()
         setupView()
         self.navigationItem.backBarButtonItem?.title = "";
 //        self.navigationItem.hidesBackButton = true
+    }
+    
+    private func loadUserData() {
+        firebaseHelper.getUserData() {(data, completed) in
+            if completed {
+                self.userData = data!
+                self.setupUserNeededView()
+            }
+            
+        }
     }
 
     private func setupView() {
@@ -43,11 +58,17 @@ class SessionDetailViewController: UIViewController {
         
         
         //FAKE all Stuff for now...HR will be added to Session
-        caloriesLabel.text = String(calcLogic.calcCalories(heartRate: 120))
+        
         heartRateLabel.text = String(120)
-        breathsLabel.text = String(calcLogic.calcBreaths(placeholder: 23))
+        caloriesLabel.text = "No Data"
+        breathsLabel.text = "No Data"
         
         loadMap()
+    }
+    
+    private func setupUserNeededView(){
+        caloriesLabel.text = String(calcLogic.calcCalories(heartRate: 120, userData: userData))
+        breathsLabel.text = String(calcLogic.calcBreaths(heartRate: 60, time: session.duration))
     }
     
     
