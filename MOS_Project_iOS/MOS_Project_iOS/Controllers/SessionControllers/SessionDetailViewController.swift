@@ -20,6 +20,7 @@ class SessionDetailViewController: UIViewController {
     
     @IBOutlet weak var mapDetail: MKMapView!
     
+    private var prevViewController: UIViewController?
     private let calcLogic = CalculatorLogic.shared
     private let firebaseHelper = FirebaseHelper.shared
     
@@ -35,6 +36,8 @@ class SessionDetailViewController: UIViewController {
         self.navigationItem.backBarButtonItem?.title = "";
 //        self.navigationItem.hidesBackButton = true
     }
+    
+
     
     private func loadUserData() {
         firebaseHelper.getUserData() {(data, completed) in

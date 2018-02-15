@@ -56,7 +56,8 @@ class LiveSessionViewController: UIViewController {
         myMap.delegate = self
         self.navigationItem.hidesBackButton = false
         centralManager = CBCentralManager(delegate: self, queue: nil)
-
+        updateDisplay()
+        self.beatsPerMinutesLabel.text = "N/A"
         
         //start stop button border color
         self.startStopButton.layer.borderColor = self.borderColor.cgColor
@@ -83,7 +84,7 @@ class LiveSessionViewController: UIViewController {
         let formattedPace = FormatDisplay.pace(distance: distance, seconds: seconds, outputUnit: UnitSpeed.metersPerSecond)
         
         timeSessionLabel.text = "\(formattedTime)"
-        distanceLabel.text = "\(formattedDistance) m"
+        distanceLabel.text = "\(formattedDistance)"
         paceLabel.text = "\(formattedPace)"
     }
     
