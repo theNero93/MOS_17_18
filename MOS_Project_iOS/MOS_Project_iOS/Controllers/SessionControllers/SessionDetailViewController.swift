@@ -27,7 +27,8 @@ class SessionDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-
+        self.navigationItem.backBarButtonItem?.title = "";
+//        self.navigationItem.hidesBackButton = true
     }
 
     private func setupView() {

@@ -14,8 +14,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-//    var navBarColor = UIColor(red:0.25, green:0.73, blue:0.85, alpha:1.0)
-    var navBarColor = UIColor.white
+    var navBarColor = UIColor(red:0.25, green:0.73, blue:0.85, alpha:1.0)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //FirebaseApp.configure()
@@ -23,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         locationManager.requestWhenInUseAuthorization()
         
         //change NavBar color
-        UINavigationBar.appearance().isHidden = true
+        //UINavigationBar.appearance().isHidden = true
         UINavigationBar.appearance().barTintColor = self.navBarColor
-        UINavigationBar.appearance().tintColor = UIColor.clear
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.clear]
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 22.0)]
         
         return true
     }

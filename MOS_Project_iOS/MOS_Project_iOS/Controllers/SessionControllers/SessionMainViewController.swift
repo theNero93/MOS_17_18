@@ -19,12 +19,22 @@ class SessionMainViewController: UIViewController {
 
     @IBOutlet weak var lastSessionsTableView: UITableView!
     
+    //border color
+    var borderColor = UIColor(red:0.00, green:0.47, blue:0.60, alpha:1.0)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lastSessionsTableView.delegate = self
         lastSessionsTableView.dataSource = self
-
+        
+        //start sessoion button border color
+//        self.butt.layer.borderColor = self.borderColor.cgColor
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.title = "Session"
     }
 
 
