@@ -66,6 +66,7 @@ class UserData {
     }
     
     func genderData() -> Int {
+        print(sex)
         if sex.uppercased() == "MALE" {
             return 1
         }else {

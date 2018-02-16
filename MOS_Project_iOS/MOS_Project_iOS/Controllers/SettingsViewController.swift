@@ -16,6 +16,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var ageInput: UITextField!
     @IBOutlet weak var sexInput: UITextField!
     @IBOutlet weak var weightInput: UITextField!
+
+    @IBOutlet weak var sizeInput: UITextField!
     @IBOutlet weak var stepGoalInput: UITextField!
     
     var user: UserData?
@@ -41,8 +43,11 @@ class SettingsViewController: UIViewController {
             nameInput.text = mUser.firstName
             lastNameInput.text = mUser.lastName
             ageInput.text = "\(mUser.age)"
+            ageInput.keyboardType = .decimalPad
             sexInput.text = mUser.sex
             weightInput.text = "\(mUser.weight)"
+            weightInput.keyboardType = .decimalPad
+            sizeInput.text = "\(mUser.size)"
             stepGoalInput.text = "\(mUser.stepGoal)"
         }
         
@@ -58,6 +63,7 @@ class SettingsViewController: UIViewController {
         mUser.age = Int(ageInput.text ?? "0")!
         mUser.sex = sexInput.text ?? ""
         mUser.weight = Int(weightInput.text ?? "0")!
+        mUser.size = Int(sizeInput.text ?? "0")!
         mUser.stepGoal = Int(stepGoalInput.text ?? "0")!
         if firebaseHelper.saveUserData(userData: mUser) {
             print("SavedSettings")
