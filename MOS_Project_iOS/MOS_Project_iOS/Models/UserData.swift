@@ -65,5 +65,13 @@ class UserData {
         return json
     }
     
+    func genderData() -> Int {
+        if sex.uppercased() == "MALE" {
+            return 1
+        }else {
+            return 0
+        }
+    }
+    
 
 }

@@ -36,4 +36,18 @@ class Location {
         timeStamp = Date(timeIntervalSince1970: timeInterval)
     }
     
+    init(dict: [String: AnyObject]){
+        latitude = dict[Location.KEY_LATITUDE] as? Double ?? 0
+        longitude = dict[Location.KEY_LONGITUDE] as? Double ?? 0
+        let timeInterval = dict[Location.KEY_TIMESTAMP] as? Double ?? 0
+        timeStamp = Date(timeIntervalSince1970: timeInterval)
+    }
+    
+    func dictRep() -> NSDictionary {
+        let dict: NSDictionary = [Location.KEY_LATITUDE : latitude,
+                                  Location.KEY_LONGITUDE : longitude,
+                                  Location.KEY_TIMESTAMP : timeStamp.timeIntervalSince1970]
+        return dict
+    }
+    
 }
