@@ -18,7 +18,7 @@ Link zum Repo: https://github.com/theNero93/MOS_17_18
 
 #### Database
 
-- Firebase and CoreData
+- Firebase
 
 #### Step detection method by Jimenez
 
